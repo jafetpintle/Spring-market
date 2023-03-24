@@ -7,6 +7,7 @@ import com.japy.platzimarket.persistence.crud.ProductoCrudRepository;
 import com.japy.platzimarket.persistence.entity.Categoria;
 import com.japy.platzimarket.persistence.entity.Producto;
 import com.japy.platzimarket.persistence.mapper.ProductMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -14,8 +15,15 @@ import java.util.Optional;
 
 @Repository
 public class ProductoRepository implements ProductRepository {
-    private ProductoCrudRepository productoCrudRepository;
-    private ProductMapper mapper;
+
+    private final ProductoCrudRepository productoCrudRepository;
+    private final ProductMapper mapper;
+
+    @Autowired
+    public ProductoRepository(ProductoCrudRepository productoCrudRepository, ProductMapper mapper) {
+        this.productoCrudRepository = productoCrudRepository;
+        this.mapper = mapper;
+    }
 
     @Override
     public List<Product> getAll(){

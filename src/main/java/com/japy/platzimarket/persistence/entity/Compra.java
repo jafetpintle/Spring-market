@@ -26,7 +26,7 @@ public class Compra {
     private String estado;
 
     @ManyToOne
-    @JoinColumn(name = "id", updatable = false, insertable = false)
+    @JoinColumn(name = "id_cliente", insertable = false, updatable = false)
     private Cliente cliente;
 
     @OneToMany(mappedBy = "compra", cascade = {CascadeType.ALL})

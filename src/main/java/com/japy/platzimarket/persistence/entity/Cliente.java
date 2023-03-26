@@ -19,9 +19,9 @@ public class Cliente {
 
     private String nombre;
 
-    private String apellido;
+    private String apellidos;
 
-    private Integer celular;
+    private String celular;
 
     private String direccion;
 
@@ -48,19 +48,19 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String getApellido() {
-        return apellido;
+    public String getApellidos() {
+        return apellidos;
     }
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
     }
 
-    public Integer getCelular() {
+    public String getCelular() {
         return celular;
     }
 
-    public void setCelular(Integer celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
 

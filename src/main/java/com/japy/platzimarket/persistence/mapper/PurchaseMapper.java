@@ -1,7 +1,6 @@
 package com.japy.platzimarket.persistence.mapper;
 
 import com.japy.platzimarket.domain.Purchase;
-import com.japy.platzimarket.domain.PurchaseItem;
 import com.japy.platzimarket.persistence.entity.Compra;
 import org.mapstruct.InheritInverseConfiguration;
 import org.mapstruct.Mapper;
@@ -20,7 +19,7 @@ public interface PurchaseMapper {
             @Mapping(source = "medioPago", target = "paymentMethod"),
             @Mapping(source = "comentario", target = "comment"),
             @Mapping(source = "estado", target = "state"),
-            @Mapping(source = "productos", target = "items"),
+            @Mapping(source = "productos", target = "items")
     })
     Purchase toPurchase(Compra compra);
     List<Purchase> toPurchases(List<Compra> compras);
